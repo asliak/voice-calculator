@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice Calculator</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+  <div class="calculator">
+    <div class="top-row">
+      <button class="mic-btn" id="micBtn" onclick="startVoice()">🎤</button>
+      <div class="display">
+        <div id="expression"></div>
+        <div id="result">0</div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="pressButton('7')">7</button>
+      <button onclick="pressButton('8')">8</button>
+      <button onclick="pressButton('9')">9</button>
+      <button class="op" onclick="pressButton('÷')">÷</button>
+
+      <button onclick="pressButton('4')">4</button>
+      <button onclick="pressButton('5')">5</button>
+      <button onclick="pressButton('6')">6</button>
+      <button class="op" onclick="pressButton('×')">×</button>
+
+      <button onclick="pressButton('1')">1</button>
+      <button onclick="pressButton('2')">2</button>
+      <button onclick="pressButton('3')">3</button>
+      <button class="op" onclick="pressButton('-')">−</button>
+
+      <button onclick="pressButton('0')">0</button>
+      <button onclick="pressButton('.')">.</button>
+      <button class="equals" onclick="pressButton('=')">=</button>
+      <button class="op" onclick="pressButton('+')">+</button>
+    </div>
+    <div id="status"></div>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>

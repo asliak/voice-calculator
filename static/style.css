@@ -1,0 +1,119 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background: #4a90d9;
+  border-radius: 12px;
+  padding: 14px;
+  width: 300px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* Top row: mic + display side by side */
+.top-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.mic-btn {
+  background: #3a7cc9;
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.mic-btn:hover { background: #2a6ab8; }
+
+.mic-btn.listening {
+  background: #e94560;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.display {
+  background: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: right;
+  flex: 1;
+  min-height: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#expression {
+  color: #999;
+  font-size: 12px;
+  min-height: 16px;
+}
+
+#result {
+  color: #222;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Button grid: 4 columns */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  background: #5a9fe8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button:hover { background: #4a8fd8; }
+button:active { background: #3a7cc9; }
+
+.op {
+  background: #4a90d9;
+}
+
+.op:hover { background: #3a7cc9; }
+
+.equals {
+  background: #5a9fe8;
+}
+
+.equals:hover { background: #4a8fd8; }
+
+#status {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 8px;
+  min-height: 18px;
+}
